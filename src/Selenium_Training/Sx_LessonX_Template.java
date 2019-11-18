@@ -32,7 +32,7 @@ public class Sx_LessonX_Template {
 
 		System.out.println("END PROGRAM");
 
-		// driver.close();
+		driver.close();
 
 	}
 
