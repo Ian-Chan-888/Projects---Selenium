@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite_Lesson144">
+<parameter name="URL_Global" value = "Suite_Level_Parameter.com"/> 
+<parameter name="APIKey_usrname" value = "123456"/> 
+
+  <test thread-count="5" name="Lesson144_Test2">
+  <parameter name = "URL_test" value ="test_level_url.com"/>
+    <classes>
+      <class name="test.Lesson144"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

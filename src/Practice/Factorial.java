@@ -1,4 +1,4 @@
-package Selenium_Training;
+package Practice;
 
 import java.util.Scanner;
 

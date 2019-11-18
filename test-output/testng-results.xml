@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="54" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
+  <suite name="Suite" duration-ms="49" started-at="2019-11-18T15:35:58 MST" finished-at="2019-11-18T15:35:58 MST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="54" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-      <class name="Selenium_Training.S18_Lesson136_day3">
-        <test-method status="PASS" signature="Day3_test1()[pri:0, instance:Selenium_Training.S18_Lesson136_day3@7d907bac]" name="Day3_test1" duration-ms="1" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
+    <test name="Listeners" duration-ms="49" started-at="2019-11-18T15:35:58 MST" finished-at="2019-11-18T15:35:58 MST">
+      <class name="test.Lesson146">
+        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:test.Lesson146@4b4523f8]" name="Lesson145_Test1" duration-ms="7" started-at="2019-11-18T15:35:58 MST" data-provider="getData" finished-at="2019-11-18T15:35:58 MST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1stsetusernam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1stpassword]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Day3_test1 -->
-        <test-method status="PASS" signature="Day3_test2()[pri:0, instance:Selenium_Training.S18_Lesson136_day3@7d907bac]" name="Day3_test2" duration-ms="0" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
+        </test-method> <!-- Lesson145_Test1 -->
+        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:test.Lesson146@4b4523f8]" name="Lesson145_Test1" duration-ms="1" started-at="2019-11-18T15:35:58 MST" data-provider="getData" finished-at="2019-11-18T15:35:58 MST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2ndsetusernam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2ndpassword]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Day3_test2 -->
-        <test-method status="PASS" signature="Day3_test3()[pri:0, instance:Selenium_Training.S18_Lesson136_day3@7d907bac]" name="Day3_test3" duration-ms="1" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
+        </test-method> <!-- Lesson145_Test1 -->
+        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:test.Lesson146@4b4523f8]" name="Lesson145_Test1" duration-ms="1" started-at="2019-11-18T15:35:58 MST" data-provider="getData" finished-at="2019-11-18T15:35:58 MST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3rdsetusernam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3rdpassword]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Day3_test3 -->
-      </class> <!-- Selenium_Training.S18_Lesson136_day3 -->
-      <class name="Selenium_Training.S18_Lesson136_day4">
-        <test-method status="PASS" signature="Day4_test1()[pri:0, instance:Selenium_Training.S18_Lesson136_day4@7791a895]" name="Day4_test1" duration-ms="1" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Day4_test1 -->
-        <test-method status="PASS" signature="Day4_test2()[pri:0, instance:Selenium_Training.S18_Lesson136_day4@7791a895]" name="Day4_test2" duration-ms="1" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Day4_test2 -->
-        <test-method status="PASS" signature="Day4_test3()[pri:0, instance:Selenium_Training.S18_Lesson136_day4@7791a895]" name="Day4_test3" duration-ms="1" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Day4_test3 -->
-      </class> <!-- Selenium_Training.S18_Lesson136_day4 -->
-      <class name="Selenium_Training.S18_Lesson136_day1">
-        <test-method status="PASS" signature="Day1_test1()[pri:0, instance:Selenium_Training.S18_Lesson136_day1@369f73a2]" name="Day1_test1" duration-ms="7" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Day1_test1 -->
-      </class> <!-- Selenium_Training.S18_Lesson136_day1 -->
-      <class name="Selenium_Training.S18_Lesson136_day2">
-        <test-method status="PASS" signature="Day2_test1()[pri:0, instance:Selenium_Training.S18_Lesson136_day2@1f28c152]" name="Day2_test1" duration-ms="2" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Day2_test1 -->
-        <test-method status="PASS" signature="Day2_test2()[pri:0, instance:Selenium_Training.S18_Lesson136_day2@1f28c152]" name="Day2_test2" duration-ms="1" started-at="2019-11-18T15:24:49 MST" finished-at="2019-11-18T15:24:49 MST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Day2_test2 -->
-      </class> <!-- Selenium_Training.S18_Lesson136_day2 -->
-    </test> <!-- Test -->
+        </test-method> <!-- Lesson145_Test1 -->
+      </class> <!-- test.Lesson146 -->
+    </test> <!-- Listeners -->
   </suite> <!-- Suite -->
 </testng-results>
