@@ -49,6 +49,17 @@ public class S18_Lesson146_Listeners_Interface_in_TestNG_framework implements IT
 	 *   </listeners>
 	 *  
 	 *  
+	 * 		**********************************************************************		
+	 *  RUNNING TESTS IN PARALLEL
+	 *  
+	 *  
+	 *  This is specified in the xml and the syntax can be implemented within the 'suite' : 
+	 *  
+	 *  <suite name = "test suite name 1" parallel = "test suite name 2" thread-count="2">
+	 *  
+	 *  
+	 *  
+	 *  
 	 *  
 	 *  
 	 *  

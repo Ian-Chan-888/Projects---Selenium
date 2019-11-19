@@ -1,11 +1,11 @@
-package test;
+package Selenium_Training;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Lesson146{
+public class S18_Lesson146_Test{
 
 	/*
 	 * 'import org.testng.annotations.Test;'
@@ -24,7 +24,7 @@ public class Lesson146{
 			
 			//1st data set
 			Object[][] data = new Object[3][2]; //defining an array with 3 rows with 2 columns as in 3 data types with max 2 values in the columns which are: username; password.
-			data[0][0] = "1stsetusernam";
+			data[0][0] = "1stsetusername_Lesson146";
 			data[0][1] = "1stpassword";
 			// data[row number] [column number]
 			//columns in the row are nothing but values for that particular combination(row)

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="49" started-at="2019-11-18T15:35:58 MST" finished-at="2019-11-18T15:35:58 MST">
+  <suite name="Suite" duration-ms="39" started-at="2019-11-18T17:45:03 MST" finished-at="2019-11-18T17:45:04 MST">
     <groups>
     </groups>
-    <test name="Listeners" duration-ms="49" started-at="2019-11-18T15:35:58 MST" finished-at="2019-11-18T15:35:58 MST">
-      <class name="test.Lesson146">
-        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:test.Lesson146@4b4523f8]" name="Lesson145_Test1" duration-ms="7" started-at="2019-11-18T15:35:58 MST" data-provider="getData" finished-at="2019-11-18T15:35:58 MST">
+    <test name="Listeners" duration-ms="39" started-at="2019-11-18T17:45:03 MST" finished-at="2019-11-18T17:45:04 MST">
+      <class name="Selenium_Training.S18_Lesson146_Test">
+        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:Selenium_Training.S18_Lesson146_Test@4b4523f8]" name="Lesson145_Test1" duration-ms="6" started-at="2019-11-18T17:45:04 MST" data-provider="getData" finished-at="2019-11-18T17:45:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1stsetusernam]]>
+                <![CDATA[1stsetusername_Lesson146]]>
               </value>
             </param>
             <param index="1">
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lesson145_Test1 -->
-        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:test.Lesson146@4b4523f8]" name="Lesson145_Test1" duration-ms="1" started-at="2019-11-18T15:35:58 MST" data-provider="getData" finished-at="2019-11-18T15:35:58 MST">
+        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:Selenium_Training.S18_Lesson146_Test@4b4523f8]" name="Lesson145_Test1" duration-ms="1" started-at="2019-11-18T17:45:04 MST" data-provider="getData" finished-at="2019-11-18T17:45:04 MST">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lesson145_Test1 -->
-        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:test.Lesson146@4b4523f8]" name="Lesson145_Test1" duration-ms="1" started-at="2019-11-18T15:35:58 MST" data-provider="getData" finished-at="2019-11-18T15:35:58 MST">
+        <test-method status="PASS" signature="Lesson145_Test1(java.lang.String, java.lang.String)[pri:0, instance:Selenium_Training.S18_Lesson146_Test@4b4523f8]" name="Lesson145_Test1" duration-ms="1" started-at="2019-11-18T17:45:04 MST" data-provider="getData" finished-at="2019-11-18T17:45:04 MST">
           <params>
             <param index="0">
               <value>
@@ -55,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lesson145_Test1 -->
-      </class> <!-- test.Lesson146 -->
+      </class> <!-- Selenium_Training.S18_Lesson146_Test -->
     </test> <!-- Listeners -->
   </suite> <!-- Suite -->
 </testng-results>

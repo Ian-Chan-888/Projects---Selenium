@@ -3,13 +3,13 @@
 <suite name="Suite">
 
 		<listeners>
-	    	<listener class-name= "test.Lesson146_Listeners"/>
+	    	<listener class-name= "Selenium_Training.S18_Lesson146_Listeners"/>
 	    </listeners>
 
 
   <test thread-count="5" name="Listeners">
     <classes>
-      <class name="test.Lesson146"/>
+      <class name="Selenium_Training.S18_Lesson146_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,10 +1,10 @@
-package test;
+package Selenium_Training;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Lesson146_Listeners implements ITestListener{
+public class S18_Lesson146_Listeners implements ITestListener{
 
 	/*
 	 *  THIS CANNOT BE RUN SEPARATELY WITHOUT THE Lesson146.xml and Lesson146.java
