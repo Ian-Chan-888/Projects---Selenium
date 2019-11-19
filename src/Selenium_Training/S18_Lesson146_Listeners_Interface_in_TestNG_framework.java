@@ -28,6 +28,9 @@ public class S18_Lesson146_Listeners_Interface_in_TestNG_framework implements IT
 	 * 
 
 	 * 		**********************************************************************		
+	 * For running examples see:
+	 * - S18_Lesson146_Listeners.java
+	 * - S18_Lesson146_Test
 	 * 
 	 *  What are Listeners? 
 	 *  -Listeners is a way of specifiying what to do next if a particular method fails, skipped...etc
@@ -66,64 +69,6 @@ public class S18_Lesson146_Listeners_Interface_in_TestNG_framework implements IT
 	 *  
 	 */
 	
-				@Override
-				public void onFinish(ITestContext context) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onFinish(context);
-					System.out.print("Testing finished");
-				}
-				
-				@Override
-				public void onStart(ITestContext context) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onStart(context);
-				}
-				
-				@Override
-				public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
-				}
-				
-				@Override
-				public void onTestFailedWithTimeout(ITestResult result) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onTestFailedWithTimeout(result);
-				}
-				
-				
-				@Override
-				public void onTestFailure(ITestResult result) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onTestFailure(result);
-				}
-				
-				
-				@Override
-				public void onTestSkipped(ITestResult result) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onTestSkipped(result);
-				}
-				
-				
-				@Override
-				public void onTestStart(ITestResult result) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onTestStart(result);
-				}
-				
-				
-				@Override
-				public void onTestSuccess(ITestResult result) {
-					// TODO Auto-generated method stub
-					ITestListener.super.onTestSuccess(result);
-				}
-
-
-
-
-
-
 
 
 

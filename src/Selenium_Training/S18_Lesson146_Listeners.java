@@ -7,7 +7,7 @@ import org.testng.ITestResult;
 public class S18_Lesson146_Listeners implements ITestListener{
 
 	/*
-	 *  THIS CANNOT BE RUN SEPARATELY WITHOUT THE Lesson146.xml and Lesson146.java
+	 *  THIS CANNOT BE RUN SEPARATELY WITHOUT THE Lesson146.xml and S18_Lesson146_Test.java
 	 *  i.e : must be run from Lesson146.xml
 	 *  
 	 */
