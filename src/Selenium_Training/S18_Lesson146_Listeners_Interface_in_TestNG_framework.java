@@ -64,11 +64,26 @@ public class S18_Lesson146_Listeners_Interface_in_TestNG_framework implements IT
 	 *  
 	 *  <suite name = "test suite name 1" parallel = "test suite name 2" thread-count="2">
 	 *  
+	 *  -thread count defines how may tests are to be run at the same time.
+	 *  - you can also specify classes to be run in paralle as well i.e : 
 	 *  
-	 *  		**********************************************************************	
+	 *  <test thread-count="3" parallel="classes" name="Test">
+    		<classes>
+    		*
+    		*
+	 *  
+	 *  
+	 *  	**********************************************************************	
 	 *  
 	 *  REPORTS: 
 	 *  
+	 *  A summarization of tests run thru the TestNG framework can be accessed by: 
+	 *  
+	 *  -Fresh your project
+	 *  -Nav to 'test-output' folder
+	 *  -Right click on 'index.html'
+	 *  -copy the Location path i.e : C:\Users\ION64-2017\eclipse-workspace\test\test-output\index.html
+	 *  -paste into a browser
 	 *  
 	 *  
 	 *  
