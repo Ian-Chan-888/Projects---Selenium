@@ -32,6 +32,7 @@ public class S18_Lesson146_Listeners_Interface_in_TestNG_framework implements IT
 	 * - S18_Lesson146_Listeners.java
 	 * - S18_Lesson146_Test
 	 * 
+	 * TOPIC 1:
 	 *  What are Listeners? 
 	 *  -Listeners is a way of specifiying what to do next if a particular method fails, skipped...etc
 	 *  
@@ -53,14 +54,20 @@ public class S18_Lesson146_Listeners_Interface_in_TestNG_framework implements IT
 	 *  
 	 *  
 	 * 		**********************************************************************		
-	 *  RUNNING TESTS IN PARALLEL
+	 *  TOPIC 2:
 	 *  
+	 *  RUNNING TESTS IN PARALLEL
+	 *  - if you want to trigger specific tests in parallel you use the parallel attribute
+	 *  - note this can lead to performance and you may not need to implement parallel implements in TestNG.
 	 *  
 	 *  This is specified in the xml and the syntax can be implemented within the 'suite' : 
 	 *  
 	 *  <suite name = "test suite name 1" parallel = "test suite name 2" thread-count="2">
 	 *  
 	 *  
+	 *  		**********************************************************************	
+	 *  
+	 *  REPORTS: 
 	 *  
 	 *  
 	 *  

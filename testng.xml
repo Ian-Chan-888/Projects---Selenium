@@ -3,7 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Selenium_Training.S18_Lesson145_DataProvider_Annotation_Parameterizing_Testcases_2"/>
+      <class name="Selenium_Training.S18_Lesson146_Test"/>
+      <class name="Selenium_Training.S18_Lesson136_day1"/>
+      <class name="Selenium_Training.S18_Lesson136_day2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
