@@ -11,9 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+
+/*note you may need to add this package manually from : http://appium.io/downloads.html (see step 13 and 14)
+ * https://search.maven.org/search?q=g:io.appium%20AND%20a:java-client
+*/
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+
+
+
 
 public class S16_Lesson120_to_131_Selenium_30_Mobile_Automation_Testing {
 

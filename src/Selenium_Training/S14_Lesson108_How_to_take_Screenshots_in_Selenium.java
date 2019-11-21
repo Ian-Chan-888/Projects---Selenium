@@ -32,12 +32,15 @@ public class S14_Lesson108_How_to_take_Screenshots_in_Selenium {
 		 */
 
 		// Takes the screen shot of facebook.com and stores it as src
-		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); //import java.io.File;
 
-		FileUtils.copyFile(src, new File("C://Users//ION64-2017//Desktop//screenshot.png")); // implement "Throws
-																								// IOException" in your
-																								// Public static void
-																								// main section.
+		FileUtils.copyFile(src, new File("C://Users//ION64-2017//Desktop//screen shots//screenshot.png")); 
+			/* implement "Throws IOException" in your Public static void main section.
+			 *   import org.apache.commons.io.FileUtils;
+			 *   	- This package may need to be added to your Java Build Path\Libraries manually;
+			 *   	  and can be downloaded here : http://commons.apache.org/proper/commons-io/
+			 */
+
 		// make sure your not using just the C:// drive root. Due to admin rights your
 		// access will be denied.
 
