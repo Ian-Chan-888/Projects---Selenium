@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Maven_Training.AppTest"/>
+      <class name="Maven_Training.RESTAPITest"/>
+      <class name="Maven_Training.AppiumTest"/>
+      <class name="Maven_Training.SeleniumTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
