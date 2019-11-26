@@ -23,7 +23,7 @@ public class S20_Lesson159_integration_of_Testing_with_Maven {
 	 *   - create a xml file for the project. (see the file already created 'Lesson159_testing.xml'
 	 *   
 	 *   
-	 *   
+	 *   12. Running Tests with Surefireplugin and 13. Integrating Testng into Maven	
 	 *   Exectue the xml thru Maven: 
 	 *   	(for syntax reference see 'Using Suite XML Files': https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html)
 
@@ -66,8 +66,20 @@ public class S20_Lesson159_integration_of_Testing_with_Maven {
 	 *  
 	 *  after that you can now run: 
 	 *  'nvm test' 
+	 *  
+	 *  NOTE if you get an error simular to : "org.apache.maven.surefire.booter.SurefireBooterForkException: 
+	 *  										There was an error in the forked processsun.security.provider.certpath.SunCertPathBuilderException: 
+	 *  										unable to find valid certification path to requested target"
+	 *  
+	 *  then see this for ref: https://stackoverflow.com/questions/57836499/maven-testng-with-surefire-plugin-unable-to-find-valid-certification-path-to-re
+	 *  remove from the testng.xml '<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">'
 	 * 	  
 	 * 
+	 * Running a Single Test
+
+		During development, you may run a single test class repeatedly. To run this through Maven, set the test property to a specific test case.
+
+    	'mvn -Dtest=AppiumTest test'
 	 * 
 	 * 
 	 *
