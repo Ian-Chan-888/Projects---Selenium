@@ -93,7 +93,7 @@ public class S23_Lesson167_Excel_Data_Apace_PIO_API_and_Download_Instructions_Fr
 					
 					[...]
   
-	 *  
+	 *  	- After adding these items into your POM xml. you can update the project by refresh(F5) or you can update the Maven Project (right-click project/Maven/update Project) or (Alt-F5)
 	 *  
 	 *  4. Create a Excel document and fill in some data columms: 
 	 *  	Testcases				Data1				Data2				Data3

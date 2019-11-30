@@ -1,6 +1,8 @@
 package Selenium_Training;
 
+import java.io.FileInputStream;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 
 public class S23_Lesson168_Access_Excel_Data {
 	/*
@@ -13,95 +15,46 @@ public class S23_Lesson168_Access_Excel_Data {
 	 * Maven Dependencies setup:
 	 * -poi-ooxml and poi
 	 * 
-	 * Strategy to access excel Data: 
-	 * 1. create a Maven Project 
-	 * 	- File/New/Maven Project/
-	 * 	- check "Create a simple project(skip archetype selection), then click Next
-	 * 	- Group id: Framework 
-	 *  - Artifact id: ExcelDriven
-	 *  - click on Finish
+	 * Strategy to access excel Data: This is an outline of how the frameworks will access data contained within a xls document. 
+	 *   Create an object for XSSFWorkbook class
+	 *   	- Create a xls workbook document
+	 *   	- Get access to the 'sheet' withn the xls document
+	 *   	- Get access in the rows within said 'sheet'. 
+	 *   	- Get access to a specific row within said 'sheet'. 
+	 *   	- Get access to all cells within the row.
+	 *   	- Get access to the Data from Excel and define them into Arrays.
+	 *   
+	 *      eg: 
+	 *      	Excel Document 
+	 *      		|
+	 *      		--sheet
+	 *      			|
+	 *      			--row
+	 *      				|
+	 *      				--cells
+	 *      
+	 *      1. Within the Maven Project (src/test/java), create a new class with a name 'dataDriven'
+	 *      2. Open the 'dataDriven class
+	 *      3. after the 'public static...' add:
+	 *       FileInputStream fis=new FileInputStream("<Location of excel file>");
+	 *       XSSFWorkbook workbook=new XSSFWorkbook();
+	 *       	- import java.io.FileInputStream;
+	 *  		- import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 	 *  
-	 *  2. Go to Google and search for 'poi ooxml' dependencies, this should take you to : https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
-	 *   - select the newest version and copy the xml snipt: 
-	 *   	eg: 
-	 *   			<dependency>
-					    <groupId>org.apache.poi</groupId>
-					    <artifactId>poi-ooxml</artifactId>
-					    <version>4.1.1</version>
-					</dependency>
-
-	 *  - Paste this into the pom.xml of your Maven project. NOTE: dont forget to frame your snipts with <dependencies> ...</dependencies>
+	 *  	4. Build a loop to find and target the 'sheet' 
+	 *  
 	 *  		eg: 
-					<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-					  <modelVersion>4.0.0</modelVersion>
-					  <groupId>Framework</groupId>
-					  <artifactId>ExcelDriven</artifactId>
-					  <version>0.0.1-SNAPSHOT</version>
-
-						<dependencies>
-						 
-							<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-							<dependency>
-							    <groupId>org.apache.poi</groupId>
-							    <artifactId>poi-ooxml</artifactId>
-							    <version>4.1.1</version>
-							</dependency>
-						
-						
-						</dependencies>
+	 *  
+	 *  		int sheets=workbook.getNumberOfSheets()
+				for (int i=0;i<sheets;i++)
+				{
+					//traverse each sheet and match to the target name
+					if (workbook.getSheetName(i).equalsIgnoreCase("testdata"))
+					{
+						XSSFSheet sheet=workbook.getSheetAt(i);//import org.apache.poi.xssf.usermodel.XSSFSheet;
+					}
 					
-					[...]
-  
-	 *  	
-	 *  3. Within the same https://mvnrepository.com/ location search for 'POI'
-	 *  	- choose/click on the newest 'Apache POI'
-	 *   	- copy : the <deendency> entry
-	 *   	eg: 
-				<dependency>
-				    <groupId>org.apache.poi</groupId>
-				    <artifactId>poi</artifactId>
-				    <version>4.1.1</version>
-				</dependency>
-	 *
-	 *  	- Paste this into your pom.xml below your 'poi ooxml' from above.
-	 *  
-	 *  eg: 
-					<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-					  <modelVersion>4.0.0</modelVersion>
-					  <groupId>Framework</groupId>
-					  <artifactId>ExcelDriven</artifactId>
-					  <version>0.0.1-SNAPSHOT</version>
-					 
-						<dependencies>
-						 
-							<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-							<dependency>
-							    <groupId>org.apache.poi</groupId>
-							    <artifactId>poi-ooxml</artifactId>
-							    <version>4.1.1</version>
-							</dependency>
-							
-							
-							<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-							<dependency>
-							    <groupId>org.apache.poi</groupId>
-							    <artifactId>poi</artifactId>
-							    <version>4.1.1</version>
-							</dependency>
-						
-						</dependencies>
-					
-					[...]
-  
-	 *  
-	 *  
-	 *  4. Create a Excel document and fill in some data columms: 
-	 *  	Testcases				Data1				Data2				Data3
-	 *  	 Login					1aaa..				2aaa..				
-	 *  	 Purchase				1bbb..				2bbb..
-	 *  	 Add Profile			1ccc..				2ccc..
-	 *  	 Delete profile			1ddd..				3ddd..
-	 *  
+				}
 	 *  
 	 *  
 	 *  
