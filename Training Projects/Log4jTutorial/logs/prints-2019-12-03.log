@@ -1,0 +1,8 @@
+15:25:49.248 [main] DEBUG alpha.Demo - I have clicked on button
+15:25:49.250 [main] INFO  alpha.Demo - button is displayed
+15:25:49.250 [main] ERROR alpha.Demo - button is NOT displayed
+15:25:49.250 [main] FATAL alpha.Demo - button is missing
+15:26:11.798 [main] DEBUG Lesson_182.act - Setting chrome driver property
+15:26:21.511 [main] INFO  Lesson_182.act - Window Maximized
+15:26:21.512 [main] DEBUG Lesson_182.act - Now hitting Amazon server
+15:26:22.776 [main] INFO  Lesson_182.act - Landed on amazon home page

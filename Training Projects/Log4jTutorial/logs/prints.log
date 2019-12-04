@@ -1,0 +1,5 @@
+15:26:25.070 [main] DEBUG Lesson_182.act - Getting the frames count
+15:26:25.091 [main] INFO  Lesson_182.act - Frames count retreived
+15:26:25.101 [main] INFO  Lesson_182.act - Successfully switched to frame
+15:26:25.101 [main] DEBUG Lesson_182.act - Identifying Draggable objects
+15:26:25.435 [main] INFO  Lesson_182.act - Drag and drop success

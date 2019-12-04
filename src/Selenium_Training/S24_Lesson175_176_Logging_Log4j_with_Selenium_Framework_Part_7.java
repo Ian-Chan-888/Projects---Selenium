@@ -1,6 +1,6 @@
 package Selenium_Training;
 
-public class S24_Lesson174_175_Logging_Log4j_with_Selenium_Framework_Part_7 {
+public class S24_Lesson175_176_Logging_Log4j_with_Selenium_Framework_Part_7 {
 	/*
 	 * In this section we will look into Logging. 
 	 * 

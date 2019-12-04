@@ -9,16 +9,14 @@ public class Demo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		log.debug("I am debugging");
+			log.debug("I have clicked on button");
 		
-		if(5>4)
-		{
-			log.info("Object is present");
+			log.info("button is displayed");
 
-			log.error("Object is not present");
+			log.error("button is NOT displayed");
 			
-			log.fatal("this is fatal");
-		}
+			log.fatal("button is missing");
+
 	}
 
 }
