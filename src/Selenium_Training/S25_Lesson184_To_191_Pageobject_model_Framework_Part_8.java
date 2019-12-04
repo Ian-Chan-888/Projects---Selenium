@@ -1,6 +1,8 @@
 package Selenium_Training;
 
-public class S25_Lesson184_185_Pageobject_model_Framework_Part_8 {
+import org.openqa.selenium.support.FindBy;
+
+public class S25_Lesson184_To_191_Pageobject_model_Framework_Part_8 {
 	/*
 	 * What is the Page Object Pattern? 
 	 * - Page Object Model is a design pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. 
@@ -18,7 +20,7 @@ public class S25_Lesson184_185_Pageobject_model_Framework_Part_8 {
 	 * 
 	 * 
 	 * 
-	 *  Lesson 185 Creating Page object Consgtructor in classes. For this example we will use the "Pageobject" project.
+	 *  Lesson 185 Creating Page object Consgtructor in classes. For this example we will use the "Pageobject" project. Found in your git hub under Training Projects.
 	 *  - The idea here is to create a library of objects specific to a web page. So that when we run tests we can call these objects. Thus makes things modular and clean.
 	 *   in this example we will use rediff.com
 	 *  
@@ -30,6 +32,16 @@ public class S25_Lesson184_185_Pageobject_model_Framework_Part_8 {
 	 *   		
 	 *   		 
 	 *   -create a package "TestCases"
+	 *    create tests cases that will 
+	 *    
+	 *    
+	 *    Page Factory: 
+	 *    Requires: import org.openqa.selenium.support.PageFactory;
+	 *    
+	 *    This runs on the same concept as the regular page object but it uses specific if not cleaner notations like 
+	 *    - '@FindB'
+	 *    
+	 *    
 	 *   		
 	 *   
 	 *     
