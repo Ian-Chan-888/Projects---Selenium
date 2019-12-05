@@ -23,7 +23,19 @@ public class S26_Lesson192_193_194_Framework_building_from_scratch {
 	 *   	- Point to the project folder 
 	 *   		- You should now ve able to view the new Maven project inside eclipse.
 	 *             
-	 *    	
+	 *    D. Configure Freamwork dependencies in POM.xml
+	 *    	- Go to https://mvnrepository.com/
+	 *    	- The following repositorys to use(use latest): 
+	 *    		- Selenium Java
+	 *    		- Testng
+	 *    		
+	 *    E. Set up Page Object Model 
+	 *    	- Create Resources folder at project level 
+	 *    	- Create Base.java class withing the Academy package 
+	 *    		- create a method called initializeDriver "public void initializeDriver"
+	 *    		
+	 *    	- Create Test Package
+	 *    
 	 *  
 	 */
 
