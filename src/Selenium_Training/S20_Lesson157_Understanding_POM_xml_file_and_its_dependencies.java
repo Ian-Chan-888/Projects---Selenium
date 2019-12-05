@@ -3,7 +3,7 @@ package Selenium_Training;
 
 
 public class S20_Lesson157_Understanding_POM_xml_file_and_its_dependencies {
-	/*
+	/*157_Understanding_POM_xml_file_and_its_dependencies
 	 *
 	 *  What is Maven: 
 	 *  1. Maven is a software project managment and build management tool for Java Frameworks. (see Lesson 153)
@@ -59,26 +59,6 @@ public class S20_Lesson157_Understanding_POM_xml_file_and_its_dependencies {
 	 *  
 	 *  10 Clean, compile, test
 	 *  
-	 *  11. Importance of Maven Sure fire plugin
-	 *   - This is used to ensure we can run all the of test cases within the Maven Project. 
-	 *   - This needs to be added to the POM.xml file
-	 *   - 1st download ref: https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
-	 *   copy the snipt: 
-	 *   
-	 *     <build>
-		    <pluginManagement>
-		      <plugins>
-		        <plugin>
-		          <groupId>org.apache.maven.plugins</groupId>
-		          <artifactId>maven-surefire-plugin</artifactId>
-		          <version>3.0.0-M4</version>
-		        </plugin>
-		      </plugins>
-		    </pluginManagement>
-		  </build>
-		  
-		  
-	 *  - paste it into the pom.xml just before the ..<dependencies>.. line. 
 	 *  
 	 * 	  
 	 * 

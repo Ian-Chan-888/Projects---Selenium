@@ -17,17 +17,10 @@ public class S20_Lesson159_integration_of_Testing_with_Maven {
 	 *  9. Maven Phases for Test Automation
 	 *  10. Clean, compile, test (lesson 159)
 	 *  11. Importance of Maven Surefire plugin.
-	 *  	- until now we have exectured all tst cases from the Test folder by using 'mvn test'
-	 *  	- How do we control a customized run thru Maven? 
-	 *  	- While remembering that through TestNG we have a way of doing this thru an xml. we can now leverage this thru Maven as well. 
-	 *   - create a xml file for the project. (see the file already created 'Lesson159_testing.xml'
-	 *   
-	 *   
-	 *   12. Running Tests with Surefireplugin and 13. Integrating Testng into Maven	
+	 *  12. Running Tests with Surefireplugin and 13. Integrating Testng into Maven	
 	 *   Exectue the xml thru Maven: 
 	 *   	(for syntax reference see 'Using Suite XML Files': https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html)
-
-	 *   
+     *
 	 *   From the POM xml you can add the 'Lesson159_testing.xml' reference within the 'maven-surefire-plugin' area: 
 	 *   
 	 *   eg: 

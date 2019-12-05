@@ -3,7 +3,7 @@ package Selenium_Training;
 
 
 public class S20_Lesson158_Importance_of_surefirePlugin_in_executing_Tests {
-	/*
+	/*    S20_Lesson158_Importance_of_surefirePlugin_in_executing_Tests
 	 *
 	 *  What is Maven: 
 	 *  1. Maven is a software project managment and build management tool for Java Frameworks. (see Lesson 153)
@@ -13,6 +13,7 @@ public class S20_Lesson158_Importance_of_surefirePlugin_in_executing_Tests {
  	 *  5. Creating Maven Project (see Lesson 155)
 	 *  6. Integrate Maven with Eclipse (see Lesson 155)
 	 *  7. Understading POM.xml file dependencies. 
+	 *  	-The POM.xml is the heart of the Maven Project as is helps define where the dependent files are located withing the Maven repository.
 	 *  8. How to find the dpendencies of the Software?
 	 *  9. Maven Phases for Test Automation
 	 *  10. Clean, compile, test
@@ -117,7 +118,30 @@ public class S20_Lesson158_Importance_of_surefirePlugin_in_executing_Tests {
 			[INFO] Finished at: 2019-11-22T12:42:55-07:00
 			[INFO] ------------------------------------------------------------------------
 			
-	 *  
+	 *  11. Importance of Maven Sure fire plugin
+	 *  	- until now we have exectured all tst cases from the Test folder by using 'mvn test'
+	 *  	- How do we control a customized run thru Maven? 
+	 *  	- While remembering that through TestNG we have a way of doing this thru an xml. we can now leverage this thru Maven as well. 
+	 *   - create a xml file for the project. (see the file already created 'Lesson159_testing.xml'
+	 *   - This is used to ensure we can run all the of test cases within the Maven Project. 
+	 *   - This needs to be added to the POM.xml file
+	 *   - 1st download ref: https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+	 *   copy the snipt: 
+	 *   
+	 *     <build>
+		    <pluginManagement>
+		      <plugins>
+		        <plugin>
+		          <groupId>org.apache.maven.plugins</groupId>
+		          <artifactId>maven-surefire-plugin</artifactId>
+		          <version>3.0.0-M4</version>
+		        </plugin>
+		      </plugins>
+		    </pluginManagement>
+		  </build>
+		  
+		  
+	 *  - paste it into the pom.xml just before the ..<dependencies>.. line. 
 	 *
 	 *  
 	 * 	  
