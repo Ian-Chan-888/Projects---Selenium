@@ -16,7 +16,7 @@ public class base {
 	public void initializeDriver() throws IOException
 	{
 		
-		//here we want a method to set the driver based on the browser type. We want to pass a browser name into this meathod and in turn it will set up the proper driver. 
+		//here we want a method to set the driver based on the browser type. We want to pass a browser name into this method and in turn it will set up the proper driver. 
 		
 		Properties prop = new Properties();
 		FileInputStream fis=new FileInputStream("O:\\Projects - Selenium\\Training Projects\\S26_End_To_end_Project\\src\\test\\java\\Academy\\data.properties"); 
