@@ -7,8 +7,10 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class base {
 
@@ -40,7 +42,16 @@ public class base {
 			//execute IE
 			WebDriver driver = new InternetExplorerDriver();
 		}
-		
+		else if (browserName =="edge")
+		{
+			//execute edge
+			WebDriver driver = new EdgeDriver();
+		}		
+		else if (browserName =="safari")
+		{
+			//execute Safari
+			WebDriver driver = new SafariDriver();
+		}		
 		
 		
 		
