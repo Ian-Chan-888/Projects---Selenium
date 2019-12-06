@@ -2,22 +2,34 @@ package Academy;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 import resoucres.base;
 
 public class HomePage extends base {//call the initailzeDriver method from the base.java class by using the 'extends' notation.
 	
+	@BeforeTest //lesson 201
+	public void initialization() throws IOException
+	{
+		driver=initializeDriver();//setting the Browser type i.e chrome,firfox..etc
+	}
+	
+	@AfterTest //lesson 201
+	public void teardown()
+	{
+		driver.close();
+	}
 	
 	
 	@Test (dataProvider="getData")// getting data from the public Object[][]..
 	public void basePageNavigation(String Username,String Password, String text) throws IOException
 	{
-		driver=initializeDriver();
-		driver.get("http://www.qaclickacademy.com/");
+		driver=initializeDriver();//setting the Browser type i.e chrome,firfox..etc
+		driver.get(prop.getProperty("url"));// not hard coding url here. instead get url from data.properties file listed in 'base'
 		LandingPage l=new LandingPage(driver);//creating object to that class and invoke methods of it. 
 		l.getLoginPage();//enters the login page
 		LoginPage lp=new LoginPage(driver);
@@ -25,8 +37,11 @@ public class HomePage extends base {//call the initailzeDriver method from the b
 		lp.getPassword().sendKeys(Password); //data[0][1].. then data[1][1]
 		System.out.println(text); //data[0][2].. then data[1][2]
 		lp.getLoginBtn().click();
+		driver.close();
 	
 	}
+	
+
 	
 	
 	@DataProvider  //Lession 198
@@ -48,5 +63,8 @@ public class HomePage extends base {//call the initailzeDriver method from the b
 		
 
 	}
+	
+
+
 	
 }

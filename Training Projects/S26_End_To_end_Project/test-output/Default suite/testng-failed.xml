@@ -5,7 +5,7 @@
     <classes>
       <class name="Academy.ValidateTitle">
         <methods>
-          <include name="basePageNavigation"/>
+          <include name="titleValidation"/>
         </methods>
       </class> <!-- Academy.ValidateTitle -->
     </classes>

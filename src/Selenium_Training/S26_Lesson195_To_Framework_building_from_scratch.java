@@ -1,6 +1,7 @@
 package Selenium_Training;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class S26_Lesson195_To_Framework_building_from_scratch {
 	/*
@@ -30,29 +31,55 @@ public class S26_Lesson195_To_Framework_building_from_scratch {
 	 *    		- Testng
 	 *    		
 	 *    E. Set up Page Object Model and build your Main and Test areas (see S26_End_To_end_Project)
-	 *    	- Create a a package called resources 
+	 *    	
+	 * Main Sources (src/main/java)   
+	 *    - Create a a package called resources 
 	 *    		- Create Base.java class withing the src/main/java/resources  
      *    			- create a method called initializeDriver "public void initializeDriver"
      *    				- enter in the code that helps set the driver. 
+     *    
      *    	- Create pageObjects a package in src/main/java/resources
      *    		- Create LandingPage.java	
-     *    			- create a ojbect method :public WebElement getLogin() 
+     *    			- create a ojbect method : public WebElement getLogin() 
+     *    			- create a ojbect method : public WebElement getTitle()
+     *    			- create a ojbect method : public WebElement getNavigationBar()
      *    		- Create LoginPage.java 
      *    			- create the following methods:
      *    				public WebElement getEmail()
      *    				public WebElement getPassword()
      *    				public WebElement getLoginBtn()  
      *    			
-	 *    		
+	 * Tests sources (src/test/java) 		
 	 *    	- Create HomePage.java Class within the src/test/java/Academy package
-	 *    		-create a method : public void basePageNavigation()
-	 *    			-This will open the browwser based on what is set in the data.properties file and go to http://www.qaclickacademy.com/. 
+	 *    		-create a method : public void basePageNavigation(String Username,String Password, String text)
+	 *    			-This will open the browwser based on what is set in the data.properties file and go to http://www.qaclickacademy.com/.
+	 *    		-create public Object [][] getData(). Add notation @DataProvider
+	 *    			-This will create a data set to be used. The idea behind this test is to use 2 data sets with one test.   
 	 *    		-create a method : public void login() throws IOException
 	 *    			- this will click on the Login link
 	 *    		-create a method : public void enterCredentialsToLogin()
 	 *    			- this will pass in the credentials and click on the login button.
 	 *    
-	 *    F.
+	 *    	-Create validateNavigationBar.java Class 
+	 *    		-create method, public void NavigationBarValidate()
+	 *    			- use Assert.assertTrue(l.getNavigationBar().isDisplayed())
+	 *    
+	 *    	-Create ValidateTitle.java Class
+	 *    		-create method, titleValidation()
+	 *    			- use Assert.assertEquals(l.getTitle().getText(), "FEATURED COURSES");
+	 *    
+	 *    
+	 *    
+	 *    F. Create a Textng xml file to run multiple tests (Lesson 201)
+	 *    		- Cretate a xml file , right click on Project / Testng/convert to Test Ng
+	 *    		- see /S26_End_To_end_Project/Lesson201_testng.xml
+	 *    		- You can run the xml file as a Testng.xml and this will run all the tests listed inside the xm.
+	 *    		- notice that the browser is not closing so what we can do is utilize the @beforeTest and @afterTest annotations. 
+	 *    
+	 *    			- create a @BeforeTest with public void initilazation()
+	 *    				- we can then move the "driver=initializeDriver();" to this new method.
+	 *    			- at the end of the class create a @AfterTest public voic teardown()
+	 *    			
 	 *    
 	 *    
 	 *    
