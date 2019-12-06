@@ -1,8 +1,8 @@
 package Selenium_Training;
 
+import org.openqa.selenium.WebElement;
 
-
-public class S26_Lesson195_To_Framework_building_from_scratch2 {
+public class S26_Lesson195_To_Framework_building_from_scratch {
 	/*
 	 *     
 	 * 1 Create a MAVEN PROJECT via command line
@@ -29,20 +29,28 @@ public class S26_Lesson195_To_Framework_building_from_scratch2 {
 	 *    		- Selenium Java
 	 *    		- Testng
 	 *    		
-	 *    E. Set up Page Object Model 
+	 *    E. Set up Page Object Model and build your Main and Test areas (see S26_End_To_end_Project)
 	 *    	- Create a a package called resources 
 	 *    		- Create Base.java class withing the src/main/java/resources  
      *    			- create a method called initializeDriver "public void initializeDriver"
-     *    				- enter in the code that helps set the driver. (see S26_End_To_end_Project)
+     *    				- enter in the code that helps set the driver. 
      *    	- Create pageObjects a package in src/main/java/resources
-     *    		- Create LandingPage
-     *    			- create a 'click on login link' within the page. 
+     *    		- Create LandingPage.java	
+     *    			- create a ojbect method :public WebElement getLogin() 
+     *    		- Create LoginPage.java 
+     *    			- create the following methods:
+     *    				public WebElement getEmail()
+     *    				public WebElement getPassword()
+     *    				public WebElement getLoginBtn()  
+     *    			
 	 *    		
 	 *    	- Create HomePage.java Class within the src/test/java/Academy package
 	 *    		-create a method : public void basePageNavigation()
 	 *    			-This will open the browwser based on what is set in the data.properties file and go to http://www.qaclickacademy.com/. 
 	 *    		-create a method : public void login() throws IOException
 	 *    			- this will click on the Login link
+	 *    		-create a method : public void enterCredentialsToLogin()
+	 *    			- this will pass in the credentials and click on the login button.
 	 *    
 	 *    F.
 	 *    
