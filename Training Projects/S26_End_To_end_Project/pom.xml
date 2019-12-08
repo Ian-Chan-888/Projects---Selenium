@@ -11,7 +11,8 @@
   <build>
    <resources>
         <resource>
-            <directory>src/main/java/resources</directory>
+        <!-- This is needed to help define where the log4j2.xml file is located -->    
+            <directory>src/main/java/resources</directory>  
             <filtering>true</filtering> 
         </resource>
     </resources>
