@@ -1,7 +1,10 @@
 package Selenium_Training;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 
 public class S26_Lesson195_To_Framework_building_from_scratch {
 	/*
@@ -70,7 +73,7 @@ public class S26_Lesson195_To_Framework_building_from_scratch {
 	 *    
 	 *    
 	 *    
-	 *    F. Create a Textng xml file to run multiple tests (Lesson 201)
+	 *    F. Create a Textng xml file to run multiple tests [Lesson 201]
 	 *    		- Cretate a xml file , right click on Project / Testng/convert to Test Ng
 	 *    		- see /S26_End_To_end_Project/Lesson201_testng.xml
 	 *    		- You can run the xml file as a Testng.xml and this will run all the tests listed inside the xm.
@@ -80,6 +83,95 @@ public class S26_Lesson195_To_Framework_building_from_scratch {
 	 *    				- we can then move the "driver=initializeDriver();" to this new method.
 	 *    			- at the end of the class create a @AfterTest public voic teardown()
 	 *    			
+	 *    G. Integrate Testng to Maven(POM.xml) [Lesson 203]
+	 *    		- Ensure you have maven installed - see S20 Lesson 154 to do this.
+	 *    		- REF: https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html
+	 *    		- you will need to add the surefire-plugin <plugin> into your POM.xml
+	 *    			- by doing this it will then trigger the testng.xml file. 
+	 *    			- The entrt to use is : 
+	 *    				- TestNG suite XML files. Remember to frame it within the <build> tag
+								  <build>
+								      <plugins>
+								        
+								          <plugin>
+								            <groupId>org.apache.maven.plugins</groupId>
+								            <artifactId>maven-surefire-plugin</artifactId>
+								            <version>3.0.0-M4</version>
+								            <configuration>
+								              <suiteXmlFiles>
+								                <suiteXmlFile>Lesson201_testng.xml</suiteXmlFile>
+								              </suiteXmlFiles>
+								            </configuration>
+								          </plugin>
+								        
+								    </plugins>
+								  </build>    			
+	 *    		When triggering the Maven command you will then trigger the testng.xml 
+	 *    			i.e :  Open command prompt , navigate to the project directory. 
+	 *    				type: mvn complie 
+	 *    					  mvn test
+	 *    
+	 *    H. Integrating Log4J [Lesson 204]
+	 *    		- adding logs (see S24 Lesson 175) for installation.
+	 *    		- Add Log4j Maven dependencies into the POM.xml file. 
+	 *    			REF: https://logging.apache.org/log4j/2.x/maven-artifacts.html
+	 *    			type to use: "Using Log4j in your Apache Maven build"
+
+					eg:
+					    <dependencies>
+					      <dependency>
+					        <groupId>org.apache.logging.log4j</groupId>
+					        <artifactId>log4j-api</artifactId>
+					        <version>2.12.1</version>
+					      </dependency>
+					      <dependency>
+					        <groupId>org.apache.logging.log4j</groupId>
+					        <artifactId>log4j-core</artifactId>
+					        <version>2.12.1</version>
+					      </dependency>
+					    </dependencies> 
+	 *    
+	 *    			- This will automatically download the jars into your project. 
+	 *    
+	 *    
+	 *    		- insert your Log4j.xml file into your resources folder of your project. 
+	 *    			eg: see S26_End_To_end_Project
+	 *    		- Define the recources location by adding a "filtering recources plugin" into your POM.xml
+	 *    		eg: 
+				[...]
+				  <build>
+				  
+					  <resources>
+					  	<resource>
+					  		<directory>src/main/resources</directory>
+					        <filtering>true</filtering>
+					  	</resource>	  
+					  </resources>
+
+	 *    			The reason for this is because it will define the location of the log4j.xml file
+	 *    		
+	 *    		- for your test java class, below your 'public class <testname>...' enter 
+	 *    		
+	 *    "Logger log = LogManager.getLogger(<name of test/class>.class.getName());"
+	 *		// import org.apache.logging.log4j.Logger; AND  import org.apache.logging.log4j.LogManager;
+	 *    
+	 *    
+	 *    		- Now you can enter in Log information messages at key points in your testing code. 
+	 *    			eg: for the @Before Test areas
+	 *    
+							@BeforeTest 
+							public void initialization() throws IOException
+							{
+								driver=initializeDriver();//setting the Browser type i.e chrome,firfox..etc
+								log.info("Driver is iniialized");
+								
+								
+								//driver.get(prop.getProperty("url"));// not hard coding url here. instead get url from data.properties file listed in 'base'
+								driver.get(prop.getProperty("url"));
+							}
+	 *    		- When the tests are now run it will create a folder called 'logs' and a file called prints-yyyy-mm-dd.log which will contain the logs you just defined. 
+	 *    
+	 *    
 	 *    
 	 *    
 	 *    

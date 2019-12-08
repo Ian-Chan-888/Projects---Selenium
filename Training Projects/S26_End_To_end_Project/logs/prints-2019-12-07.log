@@ -1,0 +1,6 @@
+21:46:09.273 [main] INFO  Academy.HomePage - Testing Non-Restricted user Navigated to Home Page
+21:46:12.931 [main] INFO  Academy.HomePage - Testing Non-Restricted user
+21:46:16.112 [main] INFO  Academy.HomePage - Testing Restricted user Navigated to Home Page
+21:46:18.031 [main] INFO  Academy.HomePage - Testing Restricted user
+21:46:19.715 [main] INFO  Academy.HomePage - Login Credentials testing complete
+21:46:19.715 [main] INFO  Academy.HomePage - Successufully Closed the Browser for HomePage

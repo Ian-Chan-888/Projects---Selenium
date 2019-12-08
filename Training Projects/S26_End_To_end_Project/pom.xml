@@ -7,6 +7,32 @@
   <version>1.0-SNAPSHOT</version>
   <name>S26_End_To_end_Project</name>
   <url>http://maven.apache.org</url>
+  
+  <build>
+   <resources>
+        <resource>
+            <directory>src/main/java/resources</directory>
+            <filtering>true</filtering> 
+        </resource>
+    </resources>
+  
+      <plugins>
+        
+          <plugin>  <!-- This is your Testng integration using Maven -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M4</version>
+            <configuration>
+              <suiteXmlFiles>
+              	<!-- Here we are triggering the Lesson201_testng.xml file -->
+                <suiteXmlFile>Lesson201_testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        
+    </plugins>
+  </build>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,6 +40,18 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- Log4J dependancies: https://logging.apache.org/log4j/2.x/maven-artifacts.html -->
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-api</artifactId>
+			<version>2.12.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-core</artifactId>
+			<version>2.12.1</version>
+	</dependency>
     
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	<dependency>

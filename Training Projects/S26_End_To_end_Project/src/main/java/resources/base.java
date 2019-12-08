@@ -1,4 +1,4 @@
-package resoucres;
+package resources;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class base {
 		//here we want a method to set the driver based on the browser type. We want to pass a browser name into this method and in turn it will set up the proper driver. 
 		
 		prop = new Properties();
-		FileInputStream fis=new FileInputStream("O:\\Projects - Selenium\\Training Projects\\S26_End_To_end_Project\\src\\main\\java\\resoucres\\data.properties"); 
+		FileInputStream fis=new FileInputStream("O:\\Projects - Selenium\\Training Projects\\S26_End_To_end_Project\\src\\main\\java\\resources\\data.properties"); 
 		//create a data.properties generic file. and link the location.
 		
 		prop.load(fis); // 

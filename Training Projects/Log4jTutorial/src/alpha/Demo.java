@@ -16,6 +16,7 @@ public class Demo {
 			log.error("button is NOT displayed");
 			
 			log.fatal("button is missing");
+			System.out.println("test end");
 
 	}
 
