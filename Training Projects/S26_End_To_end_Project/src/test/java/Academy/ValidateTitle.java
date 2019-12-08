@@ -33,7 +33,7 @@ public class ValidateTitle extends base {//call the initailzeDriver method from 
 	{
 		driver.close();
 		log.info("ValidateTitle testing complete");
-		log.info("Successufully Closed the Browser for ValidateTitle");
+		log.info("Successufully Closed the Browser for 'ValidateTitle'");
 	}
 	
 	

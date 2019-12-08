@@ -31,7 +31,7 @@ public class HomePage extends base {//call the initailzeDriver method from the b
 	{
 		driver.close();
 		log.info("Login Credentials testing complete");
-		log.info("Successufully Closed the Browser for HomePage");
+		log.info("Successufully Closed the Browser for 'HomePage'");
 	}
 	
 	

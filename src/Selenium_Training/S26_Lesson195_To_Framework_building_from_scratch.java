@@ -171,7 +171,7 @@ public class S26_Lesson195_To_Framework_building_from_scratch {
 							}
 	 *    		- When the tests are now run it will create a folder called 'logs' and a file called prints-yyyy-mm-dd.log which will contain the logs you just defined. 
 	 *    
-	 *    
+	 *    I. 
 	 *    
 	 *    
 	 *    
