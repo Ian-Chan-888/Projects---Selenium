@@ -34,6 +34,7 @@ public class ValidateTitle extends base {//call the initailzeDriver method from 
 		driver.close();
 		log.info("ValidateTitle testing complete");
 		log.info("Successufully Closed the Browser for 'ValidateTitle'");
+		driver=null;// this is in place to save resources and avoid memory increases. 
 	}
 	
 	

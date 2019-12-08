@@ -34,6 +34,7 @@ public class validateNavigationBar extends base {//call the initailzeDriver meth
 		driver.close();
 		log.info("Validating Navigation Bar testing complete");
 		log.info("Successufully Closed the Browser for 'validateNavigationBar'");
+		driver=null;// this is in place to save resources and avoid memory increases. 
 	}
 
 	

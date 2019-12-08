@@ -1,9 +1,12 @@
 package Selenium_Training;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.BeforeTest;
 
 public class S26_Lesson195_To_Framework_building_from_scratch {
@@ -171,8 +174,73 @@ public class S26_Lesson195_To_Framework_building_from_scratch {
 							}
 	 *    		- When the tests are now run it will create a folder called 'logs' and a file called prints-yyyy-mm-dd.log which will contain the logs you just defined. 
 	 *    
-	 *    I. 
+	 *    I. Fixing the Framework issues by tweaking Lesson201_testng.xml [Lesson 205]
+	 *    	-noticed that when running the first browser that was opened did not close until all the rest of the tests were completed. 
+	 *    		- all the tests listed in the .xml file is wrapped as one test i.e name = "All Tests" wraps around all the tests. 
+	 *    			and thus the first test is still considered open till the rest of the tests are complete. 
+	 *    		- to fix this we can wrap each test in its own test name. 
+	 *    		
+	 *    	Before we see: 
+				  <test thread-count="5" name="All Tests">
+				    <classes>
+				      <class name="Academy.validateNavigationBar"/>
+				      <class name="Academy.ValidateTitle"/>
+				      <class name="Academy.HomePage2"/>
+				    </classes>
+				    
+	 *    	After we can set: 
+				  <test thread-count="5" name="Test1">
+				    <classes>
+				      <class name="Academy.validateNavigationBar"/>
+				    </classes>
+				  </test> <!-- Test -->
+				  
+				    <test thread-count="5" name="Test2">
+				    <classes>
+				      <class name="Academy.ValidateTitle"/>
+				    </classes>
+				  </test> <!-- Test -->
+				  
+				    <test thread-count="5" name="Test3">
+				    <classes>
+				      <class name="Academy.HomePage2"/>
+				    </classes>
+				  </test> <!-- Test -->
+				  
+	 *     J. Screenshots on failure - TestNG Listeners [Lesson 206]
+	 *     	- Our aim here is to create a screen shot an any failures. 
+	 *     	in your base.java create an new method: 
+	 *     	public void getScreenshot() 
+	 *     -with the help of testng listeners you can trigger a specific method such as the 'getScreenshot'
+	 *     	- create a class called listeners in your src/test/java
+	 *     		public class listeners implements ITestListener
+	 *     	- add 'base b = new base(); // import resources.base;
+	 *     	- Edit the 'public void onTestFailure(ITestResult result)'
+	 *     		-add : b.getScreenshot();  // note you may want o surround this with 'try catch' when you mouse over it. 
+	 *     
+	 *     - edit the Lesson201_testing.xml and add: 
+				
+				[...]
+				<suite name="Suite">
+				
+					<listeners><!-- Lesson 206 defining where the listeners class is -->
+						<listener class-name="Academy.listeners" /> 
+					</listeners>   
+				
+				[...]
 	 *    
+	 *    	- to ensure we customize the screenshot.png file name so we dont accidently overwrite the file on subsequent failures. 
+	 *    		we want to make sure at : 	public void onTestFailure(ITestResult) 
+	 *    		we have a 'result' added i.e : 	'public void onTestFailure(ITestResult result)'
+	 *    		and then add 'result.getName()' into our b.getScreenshot();
+	 *    		eg: 
+	 *    				b.getScreenshot(result.getName());
+	 *    	- Then we have to add 'String result' to the getScreenshot method in our base.java to complete the definition.
+	 *    		eg: 
+	 *    			public void getScreenshot(String result) throws IOException
+	 *    	- Then we can append 'result' the name of the class to the screen shot file name
+	 *    		eg: 
+	 *    			FileUtils.copyFile(src, new File("C://Users//ION64-2017//Desktop//screen shots//"+result+"screenshot.png")); 
 	 *    
 	 *    
 	 *  
