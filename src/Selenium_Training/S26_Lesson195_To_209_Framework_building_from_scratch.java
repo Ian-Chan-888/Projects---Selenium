@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.BeforeTest;
 
-public class S26_Lesson195_To_Framework_building_from_scratch {
+public class S26_Lesson195_To_209_Framework_building_from_scratch {
 	/*
 	 *     
 	 * 1 Create a MAVEN PROJECT via command line
