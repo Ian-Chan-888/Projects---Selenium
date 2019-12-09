@@ -1,7 +1,5 @@
-16:10:23.540 [main] INFO  Academy.HomePage2 - Driver is iniialized
-16:10:27.179 [main] INFO  Academy.HomePage2 - Testing Non-Restricted user Navigated to Home Page
-16:10:31.516 [main] INFO  Academy.HomePage2 - Testing Non-Restricted user
-16:10:34.507 [main] INFO  Academy.HomePage2 - Testing Restricted user Navigated to Home Page
-16:10:36.363 [main] INFO  Academy.HomePage2 - Testing Restricted user
-16:10:38.050 [main] INFO  Academy.HomePage2 - Login Credentials testing complete
-16:10:38.050 [main] INFO  Academy.HomePage2 - Successufully Closed the Browser for 'HomePage'
+19:17:13.263 [main] INFO  Academy.HomePage2 - Testing Non-Restricted user
+19:17:16.850 [main] INFO  Academy.HomePage2 - Testing Restricted user Navigated to Home Page
+19:17:20.157 [main] INFO  Academy.HomePage2 - Testing Restricted user
+19:17:21.675 [main] INFO  Academy.HomePage2 - Login Credentials testing complete
+19:17:21.675 [main] INFO  Academy.HomePage2 - Successufully Closed the Browser for 'HomePage'

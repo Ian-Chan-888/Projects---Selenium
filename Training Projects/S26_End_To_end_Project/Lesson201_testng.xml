@@ -4,6 +4,7 @@
 
 <listeners><!-- Lesson 206 defining where the listeners class is -->
 	<listener class-name="Academy.listeners" /> 
+	<listener class-name="resources.ExtentReporterNG" /> 
 </listeners>
 
   <test thread-count="5" name="Test1">

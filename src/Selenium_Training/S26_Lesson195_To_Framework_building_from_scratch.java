@@ -242,7 +242,52 @@ public class S26_Lesson195_To_Framework_building_from_scratch {
 	 *    		eg: 
 	 *    			FileUtils.copyFile(src, new File("C://Users//ION64-2017//Desktop//screen shots//"+result+"screenshot.png")); 
 	 *    
-	 *    
+	 *    K. HTML reports on Test Execution [Lesson 207]
+	 *    	1. Proper reporting is important on test runs to utilize this we can use 'extent reports'
+	 *    		REF: https://extentreports.com/
+	 *      2. To use we and to import the Maven dependencies : Ref: http://extentreports.com/docs/versions/3/java/#maven
+	 *       
+				<dependency>
+				    <groupId>com.aventstack</groupId>
+				    <artifactId>extentreports</artifactId>
+				    <version>3.1.5</version>
+				</dependency>
+	 *      
+	 *      3. also add the following dependency:
+	       		<dependency>
+					<groupId>com.relevantcodes</groupId>
+					<artifactId>extentreports</artifactId>
+					<version>2.41.2</version>
+				</dependency>
+	 *      
+	 *      4. install the ExtentReporterNG.java into your resources folder. included in this lesson (from Lesson 209 Code Download)
+	 *      
+	 *      5. edit your testng.xml to define the location of ExtentReporterNG. This will be of type 'listeners'
+	 *      
+	 *      	eg: <listener class-name="resources.ExtentReporterNG" /> 
+	 *      6. once a test has run you can access the reports in the form of "ExtentReportsTestNG.html"
+	 *       location: target/surefire-reports/'ExtentReportsTestNG.html'
+	 *
+	 *     L. Integratring Project to Jenkins CI tool [Lesson 208]
+	 *      		for review Ref: S21_Lesson161_162_164_Importance_of_Jenkins_In_Test_Frameworks_Part_4
+	 *       1. Start your Jenkins server 'jenkins.war'
+	 *            java -jar jenkins.war -httpPort=8080
+	 *            - open browswer and navigate to localhost:8080 'http://localhost:8080/'
+	 *       2. Start a new item
+	 *       3. Enter name  'S26_End_To_end_Project'
+	 *       4. select Freestyle project'
+	 *       5. This will be a local project so we will not use Git. 
+	 *          Click on the 'Advanced...' button
+	 *       6. Check box the 'Use custom workspace' and a Directory field should appear. 
+	 *       7. type in the directory location to your project
+	 *          	O:\Projects - Selenium\Training Projects\S26_End_To_end_Project
+	 *       8. In the Build section click on 'Add build step' and then click on 'Invoke top-level Maven targets'
+	 *       9. Choose the Maven version drop down and ensure a version exisits and is selected. 
+	 *       10. in the goals section type 'test'
+	 *       11. Click on the 'Save' button' 
+	 *       12. you can run by selecting the Build Now. 
+	 *            
+	 *      
 	 *  
 	 */
 

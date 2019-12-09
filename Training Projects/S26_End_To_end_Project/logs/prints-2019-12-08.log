@@ -1,6 +1,6 @@
-16:10:06.662 [main] INFO  Academy.validateNavigationBar - Validating Navigation Bar testing complete
-16:10:06.665 [main] INFO  Academy.validateNavigationBar - Successufully Closed the Browser for 'validateNavigationBar'
-16:10:11.936 [main] INFO  Academy.ValidateTitle - Driver is iniialized
-16:10:16.417 [main] INFO  Academy.ValidateTitle - Navigated to Home Page
-16:10:18.289 [main] INFO  Academy.ValidateTitle - ValidateTitle testing complete
-16:10:18.290 [main] INFO  Academy.ValidateTitle - Successufully Closed the Browser for 'ValidateTitle'
+19:16:53.568 [main] INFO  Academy.ValidateTitle - Navigated to Home Page
+19:16:54.805 [main] INFO  Academy.ValidateTitle - Confirmed 'FEATURED COURSES'
+19:16:54.867 [main] INFO  Academy.ValidateTitle - ValidateTitle testing complete
+19:16:54.867 [main] INFO  Academy.ValidateTitle - Successufully Closed the Browser for 'ValidateTitle'
+19:17:00.380 [main] INFO  Academy.HomePage2 - Driver is iniialized
+19:17:09.714 [main] INFO  Academy.HomePage2 - Testing Non-Restricted user Navigated to Home Page
